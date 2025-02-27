@@ -18,6 +18,8 @@ export default function Borough({ limit }) {
           return {...item, tracked: false }
         });
 
+        console.log(formattedData)
+
         updateComplaints(formattedData)
       } catch (error) {
         console.log(error);

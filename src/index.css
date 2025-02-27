@@ -4,8 +4,16 @@ ul {
   padding: 0;
 }
 
+button {
+  max-width: 10rem;
+}
+
 .complaint-list > * {
   margin-bottom: 1rem;
+}
+
+.nav-list > * {
+  margin-block: 0.5rem;
 }
 
 .complaint {
@@ -14,8 +22,4 @@ ul {
   gap: 0.5rem;
   border: 1px solid black;
   padding: 1rem;
-}
-
-button {
-  max-width: 10rem;
 }

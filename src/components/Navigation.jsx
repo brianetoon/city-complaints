@@ -13,7 +13,7 @@ export default function Navigation({ limit, setLimit }) {
           onChange={(e) => setLimit(e.target.value)}
         />
 
-        <ul> 
+        <ul className="nav-list"> 
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/tracking">Tracked Complaints</NavLink></li>
           <li><b>Boroughs:</b></li>

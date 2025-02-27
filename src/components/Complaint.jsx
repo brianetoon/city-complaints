@@ -10,7 +10,6 @@ export default function Complaint({ complaint }) {
   // Note: this could (and should) be moved to the store
   const toggleTracked = (updatedComplaint) => {
     updatedComplaint.tracked = !updatedComplaint.tracked
-
     const updatedComplaints = complaints.map(complaint => {
       return complaint.unique_key === updatedComplaint.unique_key ? updatedComplaint : complaint
     });
@@ -20,16 +19,17 @@ export default function Complaint({ complaint }) {
 
   return (
     <li className="complaint">
-      {complaint.complaint_type}
+      <b>{complaint.complaint_type}</b>
+
+      <button onClick={() => toggleTracked(complaint)}>
+        {complaint.tracked ? "Untrack Complaint" : "Track Complaint"}
+      </button>
+
       <button 
         onClick={() => setShowResponse(!showResponse)}
         className="toggle"
       >
         Toggle Response
-      </button>
-
-      <button onClick={() => toggleTracked(complaint)}>
-        {complaint.tracked ? "Untrack Complaint" : "Track Complaint"}
       </button>
 
       {showResponse && <p>{complaint.resolution_description}</p>}
