@@ -1,5 +1,7 @@
 # City Complaints Exercise
 
+## Part 1
+
 1. Create a new React app called "city_complaints"
 2. Implement Router (npm i react-router-dom)
 3. Create a Home and Borough page and a Navbar component
@@ -17,6 +19,8 @@
 3. Each complaint result should have an option to “Track” it (to save it for later), unless it's already been saved
 4. From the Tracking page, you should also be able to “Remove” specific complaints as well
 5. Use a state management library like Redux or Zustand for tracking/saving complaints 
+
+## API
 
 API (endpoint example):
  `https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD&borough=BRONX&$limit=1`
